@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect, Fragment } from "react";
 
 const Tours = () => {
   return (
-    <div>Tours</div>
-  )
-}
+    <Fragment>
+      <h2> tours component</h2>
+    </Fragment>
+  );
+};
 
-export default Tours
+export default Tours;
