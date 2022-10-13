@@ -1,10 +1,19 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
+import Tour from "./Tour";
 
-const Tours = () => {
+const Tours = (props) => {
   return (
-    <Fragment>
-      <h2> tours component</h2>
-    </Fragment>
+    <section>
+      <div className="title">
+        <h2> our tours</h2>
+        <div className="underline"></div>
+      </div>
+      <div>
+        {props.tours.map((tour) => {
+          return <Tour key={tour.id} {...tour} />;
+        })}
+      </div>
+    </section>
   );
 };
 

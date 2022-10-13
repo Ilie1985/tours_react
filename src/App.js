@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 import Loading from "./components/Loading";
 import Tours from "./components/Tours";
 
@@ -30,14 +30,14 @@ const App = () => {
   if (loading) {
     return (
       <main>
-        <Loading />
+        <Loading  />
       </main>
     );
   }
 
   return (
     <main>
-      <Tours />
+      <Tours tours={data}/>
     </main>
   );
 };
