@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Tour from "./Tour";
 
-const Tours = (props) => {
+const Tours = ({ tours, removeTour }) => {
   return (
     <section>
       <div className="title">
@@ -9,8 +9,8 @@ const Tours = (props) => {
         <div className="underline"></div>
       </div>
       <div>
-        {props.tours.map((tour) => {
-          return <Tour key={tour.id} {...tour} />;
+        {tours.map((tour) => {
+          return <Tour key={tour.id} {...tour} removeTour={removeTour} />;
         })}
       </div>
     </section>
